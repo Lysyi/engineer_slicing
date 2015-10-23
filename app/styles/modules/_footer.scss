@@ -1,0 +1,28 @@
+// *************************************
+// Main footer
+// *************************************
+
+@import "../core/settings";
+@import "../core/helpers";
+
+.main-footer-conainer {
+  @include background-image(linear-gradient(to right, #273d02, #65790b));
+  max-width: 1400px;
+  height: 300px;
+  margin: 0 auto;
+  font-size: $big-font-size;
+  .main-footer--content {
+    padding: 40px 0 0 285px;
+    a {
+      font-size: 60px;
+      line-height: 60px;
+      @extend %c-no-decoration;
+      &:hover {
+        @extend %c-underline;  
+      }
+    }
+    p {
+      padding: 35px 0 0 35px;
+    }
+  }
+}

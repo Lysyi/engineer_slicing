@@ -1,0 +1,38 @@
+// *************************************
+// Main news
+// *************************************
+
+@import "../core/settings";
+@import "../core/helpers";
+
+.main-news-container {
+  margin-left: span(2) + gutter();
+  margin-right: span(1);
+  img {
+    @extend %l-pull-left;
+    margin-bottom: 15px;
+  }
+  .main-news--block {
+    margin: 0 0 0 235px;
+  }
+  .main-news--item {
+    @extend %l-pull-left;
+    width: 50%;
+    padding: 0 45px 5px 0;
+    span {
+      display: block;
+      padding: 0 0 10px 0;
+      font-size: 10px;
+      opacity: .5;
+    } 
+    a {
+      display: block;
+      padding: 0 0 15px 0;
+      font-size: 16px;
+    }
+    p {
+      padding: 0 0 15px 0;
+      font-size: 15px;
+    }
+  }
+}

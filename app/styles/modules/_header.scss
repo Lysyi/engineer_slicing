@@ -1,0 +1,70 @@
+// *************************************
+// Header component
+// *************************************
+
+@import "../core/settings";
+@import "../core/helpers";
+
+.main-header-container {
+  @extend %c-center;
+  @extend %l-relative;
+  max-width: 1400px;
+  height: auto;
+  margin: 0 auto;
+  
+  .main-header--logo {
+    @extend %l-pull-left;
+    margin: 50px 0 0 35px;
+  }
+
+  .main-header--quote {
+    @extend %l-clearfix;
+    @extend %l-clear-both;
+    @extend %c-left;
+    margin: 40px 0 0 0;
+    padding: 0 208px;
+  }
+
+  .main-header--action-block {
+    @extend %l-inline-block;
+    margin-top: 50px;
+    .button {
+      @include box-shadow(rgba(#000000, 0.2) 0 3px 1px 1px, rgba(#ffffff, 0.3) 0 2px 2px 0 inset);
+      @include border-left-radius(5px);
+      @include border-right-radius(5px);
+      @extend %l-pull-left;
+      height: 30px;
+      margin: 0 25px 0 0;
+      padding: 0 50px;
+      background-color: #FF7D09;
+      border: none;
+      color: #fff;
+      &:hover {
+        background-color: #fff;
+        color: #FF7D09;
+      }
+    }
+    a {
+      @extend %l-pull-left;
+      @extend %c-no-decoration;
+      margin: 5px 0 0 25px;
+      border-bottom: dotted rgba(255, 255, 255, .4) 2px;
+      &:hover {
+        border: none;
+      }
+    }
+  }
+
+  .header-advert-container {
+    @extend %c-left;
+    @include border-radius(4px);
+    position: absolute;
+    width: 230px;
+    margin: 0 35px 20px 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px 10px 30px 20px;
+    border: solid #fff 1px;
+    font-size: $big-font-size;
+  }
+}

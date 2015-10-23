@@ -1,0 +1,145 @@
+// Import vendors
+// --------------
+@import 'compass';
+@import 'compass/reset';
+@import 'susy';
+@import 'breakpoint';
+
+@import '../../bower_components/owl.carousel/src/scss/owl.carousel';
+
+
+// Import core
+// -----------
+@import '../../core/fonts';
+@import '../../core/settings';
+@import '../../core/helpers';
+@import '../../core/content';
+@import '../../core/base';
+@import '../../core/layout';
+
+
+// // Import modules
+// // --------------
+@import '../../modules/sprites';
+@import '../../modules/form';
+@import '../../modules/menu';
+@import '../../modules/tab';
+@import '../../modules/news';
+@import '../../modules/header';
+@import '../../modules/footer';
+
+
+
+.about-page {
+  @include background-image(linear-gradient(to right, #77864e, #d6c242));
+
+  .main-header-container {
+    height: 630px;
+    @include background-image(linear-gradient(to right, #596c38, #ceb82a));
+  }
+  
+  .main-footer-conainer {
+    @include background-image(linear-gradient(to right, #31440f, #a68f01));
+  }
+}
+
+.header-about-container {
+  position: absolute;
+  width: 960px;
+  min-height: 410px;
+  left: 190px;
+  bottom: -30px;
+  background: url('../../../images/person-bg.png') 0 0 no-repeat;
+}
+
+.header-about-info {
+  @extend %c-left;
+  @extend %l-pull-right;
+  width: 440px;
+  padding-top: 40px;
+  h5 {
+    padding-bottom: 25px;
+    line-height: 32px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+.carousel-container {
+  margin-left: span(2) + gutter();
+  margin-right: span(2) + gutter();
+
+  .owl-item {
+    height: 320px;
+    overflow: hidden;
+    .item {
+      position: absolute;
+      bottom: 0;   
+      p {
+        padding: 5px 0;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    .owl-prev {
+      float: left;
+      width: 0; 
+      height: 0;
+      top: 20px;
+      left: -8px;
+      margin-left: -45px;
+      border-top: 40px solid transparent;
+      border-bottom: 40px solid transparent;
+      border-right: 30px solid rgba(#ffffff, 0.3);
+      text-indent: -99999px;
+      &:hover {
+        border-right: 30px solid rgba(#ffffff, 0.6);
+      }
+    }
+    .owl-next {
+      float: right;
+      width: 0; 
+      height: 0;
+      top: 20px;
+      left: -8px;
+      margin-right: -45px;
+      border-top: 40px solid transparent;
+      border-bottom: 40px solid transparent;
+      border-left: 30px solid rgba(#ffffff, 0.3);
+      text-indent: -99999px;
+      &:hover {
+        border-left: 30px solid rgba(#ffffff, 0.6);
+      }
+    }
+  }
+}
+
+.client-list {
+  margin-left: span(2) + gutter();
+  margin-right: span(2) + gutter();
+  li {
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 200px;
+  }
+  div {
+    position: absolute;
+    padding: 0 10px;
+    bottom: 0;
+  } 
+  img {
+  }
+  p {
+    padding: 5px 0;
+    font-size: 15px;
+  }
+}
+

@@ -1,0 +1,179 @@
+// *************************************
+// Forms component
+// *************************************
+
+@import "../core/settings";
+@import "../core/helpers";
+
+.input-type, .textarea {
+  @include border-left-radius(2px);
+  @include border-right-radius(2px);
+  @include placeholder {
+    color: #FFFCE4;
+  }
+  height: 35px;
+  padding: 0 10px;
+  background-color: transparent;
+  border: solid #FFFCE4 1px;
+  font-size: $def-font-size;
+  color: #FFFCE4;
+}
+
+.textarea {
+  @include placeholder {
+    color: #FFFCE4;
+  }
+  height: 105px;
+  padding: 10px;
+}
+
+.button {
+  @include border-left-radius(2px);
+  @include border-right-radius(2px);
+  height: 25px;
+  padding: 0 10px;
+  background-color: #d7dea8;
+  border: solid #d7dea8 1px;
+  font-size: $def-font-size;
+  color: #7F9F1E;
+  &:hover {
+    cursor: pointer;
+    background-color: #7F9F1E;
+    color: #d7dea8;
+  }
+}
+
+.main-header--search-form {
+  @extend %l-pull-right;
+  margin: 50px 35px 0 0; 
+  .input-type {
+    @extend %l-pull-left;
+    @include border-right-radius(0);
+    width: 205px;
+    height: 25px;
+    border-right: 0px;
+    font-size: $small-font-size;
+  }
+  .button {
+    @extend %l-pull-left;
+    @include border-left-radius(0);
+    width: 100px;
+    font-size: $small-font-size;
+  }
+}
+
+.main-content-search-block {
+  @include span(8 of 14);
+  margin-left: span(3) + gutter();
+  .main-content-search--input {
+    width: 100%;
+    height: 35px;
+    padding-left: 45px;
+  }
+  .sprite {
+    position: absolute;
+    margin: 5px 0 0 5px;
+  }
+}
+
+.content-advert-block {
+  @include border-radius(5px);
+  position: absolute;
+  width: 230px;
+  margin-top: 20px;
+  margin-right: 35px;
+  padding: 50px;
+  right: 0;
+  background-color: rgba(#ffffff, 0.1);
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 0;
+    top: 20px;
+    left: -8px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid rgba(#ffffff, 0.1);
+  }
+}
+
+.main-contact-form {
+  padding-top: 35px;
+  border-top: solid rgba(#ffffff, 0.3) 1px;
+  .content  {
+    padding-bottom: 10px;
+  }
+  .main-contact-form--label {
+    @include span(3 of 14);
+    @extend %l-pull-left;
+    padding-top: 4px;
+    text-align: right;
+    font-size: $big-font-size;
+  }
+  .input-type {
+    @include span(8 of 14);
+    @extend %l-pull-left;
+    margin-right: gutter(0);
+  }
+  .textarea {
+    @include span(8 of 14);
+    @extend %l-pull-left;
+    margin-right: gutter(0);
+  } 
+  .button {
+    @extend %l-pull-right;
+    margin-top: 5px;
+    margin-right: span(3) + gutter();
+    padding: 0 50px;
+    background-color: transparent;
+    border: solid #fff 1px;
+    color: #fff;
+    &:hover {
+      background-color: #d7dea8;
+      border: solid #d7dea8 1px;
+      color: #7F9F1E;
+    }
+  }
+}
+
+.contact-info-block {
+  @include span(4 of 14);
+  @extend %l-pull-left; 
+  margin-top: 25px;
+  margin-left: span(3) + gutter();
+  font-size: $small-font-size;
+  ul {
+    padding-bottom: 10px;
+  }
+  li {
+    padding-right: 15px;
+    padding-bottom: 5px;
+    span {
+      font-size: 15px;
+    }
+  }
+}
+
+.message-contact-form {
+  @include span(5 of 14);
+  @extend %l-pull-left; 
+  .input-type, .textarea {
+    width: 79%;
+    margin-bottom: 10px;
+  }
+  .button {
+    @extend %l-pull-right;
+    width: 50%; 
+    margin-right: span(3);
+    background-color: transparent;
+    border: solid #fff 1px;
+    color: #fff;
+    &:hover {
+      background-color: #d7dea8;
+      border: solid #d7dea8 1px;
+      color: #7F9F1E;
+    }
+  }
+}
+
