@@ -12,12 +12,12 @@ $fix-mqs: false !default;
 $susy: (
   columns: 14,
   gutters: .14,
-  debug: (
-    image: show,
-    color: blue,
-    output: overlay,
-    toggle: top right,
-  )
+  // debug: (
+  //   image: show,
+  //   color: blue,
+  //   output: overlay,
+  //   toggle: top right,
+  // )
 );
 
 
